@@ -46,6 +46,10 @@ This project is implemented using the Ruby programming language, known for its e
 - Notifications System: Develop a notifications system to remind borrowers of upcoming due dates for returned books.
 
 ## Getting Started <a name="getting-started"></a>
+1. Clone the project repository:
+   ```
+   git clone https://github.com/PabloBona/school_library.git
+   ```
 ## Setup <a name="setup"></a>
 To set up the project locally, follow these steps:
 1. Clone the project repository:
