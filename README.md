@@ -8,7 +8,10 @@
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Usage](#usage)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-project)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [❓ FAQ](#faq)
@@ -28,12 +31,22 @@ This project is built using Ruby, a dynamic, open-source programming language kn
 
 Visit the official [Ruby Website](https://www.ruby-lang.org/) website to learn more about the language and its capabilities.
 
+### Tech Stack <a name="tech-stack"></a>
+
+This project is implemented using the Ruby programming language, known for its elegant syntax and flexibility. Ruby provides a suitable foundation for this Morse code decoding project due to its ease of use and string manipulation capabilities.
+
 ## Key Features <a name="about-project"></a>
 - [x] Implementation of functions using `def ...end` syntax.
 - [x] Display output using `puts ...`.
 - [x] Create classes using `class ...end` syntax.
 
+## Future Features <a name="future-project"></a>
+- Command-line Interface: Enhance the app by adding a command-line interface for easy interaction and management of the library's functions.
+- Book Recommendations: Implement a feature that suggests related books to borrowers based on their borrowing history and interests.
+- Notifications System: Develop a notifications system to remind borrowers of upcoming due dates for returned books.
+
 ## Getting Started <a name="getting-started"></a>
+## Setup <a name="setup"></a>
 To set up the project locally, follow these steps:
 1. Clone the project repository:
    ```
@@ -44,17 +57,13 @@ To set up the project locally, follow these steps:
    cd school_library
    ```
 
-### Prerequisites <a name="setup"></a>
+### Prerequisites <a name="prerequisites"></a>
 - An integrated development environment (IDE) like Visual Studio Code.
 - Ruby installed on your machine.
 - Git installed on your machine.
 - A GitHub account for version control.
 
-### Tech Stack <a name="tech-stack"></a>
-
-This project is implemented using the Ruby programming language, known for its elegant syntax and flexibility. Ruby provides a suitable foundation for this Morse code decoding project due to its ease of use and string manipulation capabilities.
-
-## Usage of Ruby
+# Usage of Ruby <a name="usage"></a>
 
 Ruby is used extensively throughout the project for various tasks, including:
 
@@ -65,6 +74,7 @@ Ruby is used extensively throughout the project for various tasks, including:
 
 The project leverages Ruby's strengths to provide an efficient and user-friendly Morse code decoding solution.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Authors <a name="authors"></a>
 👤 **Pablo Bonasera**
@@ -97,8 +107,6 @@ If you find this project helpful, consider giving it a ⭐️ to show your suppo
 
 ## Acknowledgments <a name="acknowledgements"></a>
 I would like to thank Microverse and all my peers and colleagues at Microverse for giving me the opportunity to work on this project.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
 
