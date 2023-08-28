@@ -77,12 +77,6 @@ The project leverages Ruby's strengths to provide an efficient and user-friendly
 **Q: How do I add a new student or teacher to the library?**
 A: To add a new student or teacher to the library, you can leverage the methods provided in the Ruby script. There will be functions designed to facilitate the addition of new individuals to the library's database. Make sure to follow the usage instructions in the appropriate sections of the README.
 
-**Q: Can I add new books to the library's collection using this app?**
-A: Yes, absolutely! The School Library (OOP) app is equipped with functionalities to add new books to the library's collection. The instructions for adding books should be clearly outlined in the README's relevant sections.
-
-**Q: How can I record who borrowed a book and when they borrowed it?**
-A: This app simplifies the process of tracking book borrowing. Utilize the provided methods to record borrowing activities, ensuring you accurately input the borrower's information and the corresponding book. Refer to the usage guidelines for step-by-step instructions.
-
 **Q: Is there a plan to add more features to this application?**
 A: Yes, the development team has plans to enhance this application's capabilities. One upcoming feature is to make the application executable via the command line, providing more convenience and accessibility to users.
 
