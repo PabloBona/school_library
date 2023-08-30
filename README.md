@@ -69,14 +69,40 @@ To set up the project locally, follow these steps:
 
 # Usage of Ruby <a name="usage"></a>
 
-Ruby is used extensively throughout the project for various tasks, including:
+Follow these steps to use the program:
 
-- Implementing the decoding algorithms.
-- Creating reusable methods for character, word, and message decoding.
-- Manipulating strings and performing pattern matching.
-- Executing the script to decode Morse code messages.
+1. Open your terminal.
+2. Navigate to the directory where the program files are located using the `cd` command.
 
-The project leverages Ruby's strengths to provide an efficient and user-friendly Morse code decoding solution.
+```bash
+cd /path/to/your/program/files
+```
+
+3. Start the Interactive Ruby (IRB) console by typing `irb` and pressing Enter.
+
+```bash
+irb
+```
+
+4. Inside the IRB console, load the `test.rb` file to execute the program.
+
+```ruby
+load 'test.rb'
+```
+
+5. The program will run, and you will see the output in the console.
+
+```maximilianus
+Maximilianus               
+Maximilian                 
+=> true
+```
+
+That's it! You've successfully executed the program using IRB.
+
+Remember to replace `/path/to/your/program/files` with the actual path to the directory where your program files are located.
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
