@@ -92,7 +92,8 @@ load 'test.rb'
 
 5. The program will run, and you will see the output in the console.
 
-```maximilianus
+```
+maximilianus
 Maximilianus               
 Maximilian                 
 => true
