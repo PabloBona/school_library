@@ -1,9 +1,9 @@
 class Student < Person
   attr_reader :classroom
 
-  def initialize(age, classroom, name = 'Unknown', parent_permission: true)
+  def initialize(age, classroom = nil, name = 'Unknown', parent_permission: true)
     super(age, name, parent_permission: parent_permission)
-    assign_to_classroom(classroom) if classroom
+    self.classroom = classroom if classroom
   end
 
   def classroom=(classroom)
