@@ -94,8 +94,16 @@ load 'test.rb'
 
 ```
 maximilianus
-Maximilianus               
-Maximilian                 
+Maximilianus
+Maximilian
+Classroom label: Math
+Student 1: Alice (16 years old)
+Student 2: Bob (17 years old)
+Rental date: 2023-08-30
+Rental person: John
+Rental book: The Great Gatsby
+Person's rentals: ["The Great Gatsby"]
+Book's rentals: ["John"]              
 => true
 ```
 
