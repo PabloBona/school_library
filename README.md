@@ -107,7 +107,29 @@ Book's rentals: ["John"]
 => true
 ```
 
-That's it! You've successfully executed the program using IRB.
+6. To create a Person, Book or Rental object, use the following syntax:
+
+```
+ruby main.rb
+```
+You will see the following output in the console:
+
+```
+Welcome to OOP School Library Application!
+
+Please choose an option by entering a number: 
+1 - List all books
+2 - List all people
+3 - Create a person(student or teacher)
+4 - Create a book
+5 - Create a rental
+6 - List all rentals for a given person id
+7 - Exit
+```
+
+7. Enter the number corresponding to the option you want to execute and press Enter.
+
+That's it! You've successfully executed the program.
 
 Remember to replace `/path/to/your/program/files` with the actual path to the directory where your program files are located.
 
