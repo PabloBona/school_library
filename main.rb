@@ -12,7 +12,7 @@ class Main
     name = gets.chomp
     print 'Specialisation: '
     specialisation = gets.chomp
-    puts 'Person created successfully '
+    puts 'Teacher created successfully '
     puts
     @app.create_a_teacher(age, specialisation, name)
   end
@@ -24,14 +24,14 @@ class Main
     name = gets.chomp
     print 'Has parents permission ? [y/n]: '
     permission = gets.chomp
-    puts 'Person created successfully '
+    puts 'Student created successfully '
     puts
     @app.create_a_student(name, age, permission)
   end
 
   def create_a_person
     loop do
-      print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
+      print 'Would you like to create a student (1) or a teacher (2)? [Please enter the corresponding number]:'
       option = gets.chomp
 
       case option
@@ -58,10 +58,10 @@ class Main
   end
 
   def create_a_rental
-    puts 'Select a book from the following list by number'
+    puts 'Choose a book from the list below by entering the corresponding number:'
     list_all_books(with_id: true)
     book = gets.chomp
-    puts 'Select a person from the following list by number(not id)'
+    puts 'Choose a person from the following list by number(not id)'
     list_all_persons(with_id: true)
     person = gets.chomp
     print 'Date: '
@@ -77,7 +77,7 @@ class Main
     puts 'Rentals: '
     rentals = @app.list_rental_person(id.to_i)
     rentals&.each do |rental|
-      puts "Date: \"#{rental.date}\", Book: #{rental.book.title} by #{rental.book.author}"
+      puts "Date: \"#{rental.date}\", Book: #{rental.person.title} by #{rental.person.author}"
     end
     puts
   end
@@ -86,7 +86,7 @@ class Main
     puts 'Please choose an option by entering a number: '
     puts '1 - List all books'
     puts '2 - List all people'
-    puts '3 - Create a person'
+    puts '3 - Create a person(student or teacher)'
     puts '4 - Create a book'
     puts '5 - Create a rental'
     puts '6 - List all rentals for a given person id'
@@ -120,7 +120,7 @@ class Main
   end
 
   def main
-    puts 'Welcome to school library App!'
+    puts 'Welcome to OOP School Library Application!'
     puts
 
     options = %i[list_all_books list_all_persons create_a_person create_a_book create_a_rental list_rental_person]
@@ -136,7 +136,7 @@ class Main
         puts 'Option unknown'
       end
     end
-    puts 'Thank you for using this app!'
+    puts 'Appreciate your usage of this application!'
   end
 end
 
