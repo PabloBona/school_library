@@ -8,7 +8,7 @@ require_relative 'student'
 require_relative 'book'
 require_relative 'rental'
 
-person = Person.new(22, 'maximilianus')
+person = Person;new(22, 'maximilianus')
 puts person.correct_name
 
 capitalized_person = CapitalizeDecorator.new(person)
