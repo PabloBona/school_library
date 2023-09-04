@@ -80,6 +80,17 @@ class Interface
     puts
   end
 
+  def list_rental_person
+    print 'ID of person: '
+    id = gets.chomp
+    puts 'Rentals: '
+    rentals = @app.list_rental_person(id.to_i)
+    rentals&.each do |rental|
+      puts "Date: \"#{rental.date}\", Book: #{rental.person.title} by #{rental.person.author}"
+    end
+    puts
+  end
+
   private
 
   def create_student
@@ -97,7 +108,7 @@ class Interface
 
     app.create_a_student(name, age, permission)
   end
-
+  
   def create_teacher
     print 'Age: '
     age = gets.chomp.to_i
@@ -113,4 +124,5 @@ class Interface
 
     app.create_a_teacher(name, age, specialisation)
   end
+
 end

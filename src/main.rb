@@ -1,85 +1,10 @@
-require_relative 'app'
+require_relative 'ui_interface'
 
 class Main
+  attr_accessor :interface
+
   def initialize
-    @app = App.new
-  end
-
-  def create_a_teacher
-    print 'Age: '
-    age = gets.chomp
-    print 'Name: '
-    name = gets.chomp
-    print 'Specialisation: '
-    specialisation = gets.chomp
-    puts 'Teacher created successfully '
-    puts
-    @app.create_a_teacher(age, specialisation, name)
-  end
-
-  def create_a_student
-    print 'Age: '
-    age = gets.chomp
-    print 'Name: '
-    name = gets.chomp
-    print 'Has parents permission ? [y/n]: '
-    permission = gets.chomp
-    puts 'Student created successfully '
-    puts
-    @app.create_a_student(name, age, permission)
-  end
-
-  def create_a_person
-    loop do
-      print 'Would you like to create a student (1) or a teacher (2)? [Please enter the corresponding number]:'
-      option = gets.chomp
-
-      case option
-      when '1'
-        create_a_student
-        break
-      when '2'
-        create_a_teacher
-        break
-      else
-        puts 'Option unknown'
-      end
-    end
-  end
-
-  def create_a_book
-    print 'Title: '
-    title = gets.chomp
-    print 'Author: '
-    author = gets.chomp
-    @app.create_a_book(title, author)
-    puts 'Book created successfully'
-    puts
-  end
-
-  def create_a_rental
-    puts 'Choose a book from the list below by entering the corresponding number:'
-    list_all_books(with_id: true)
-    book = gets.chomp
-    puts 'Choose a person from the following list by number(not id)'
-    list_all_persons(with_id: true)
-    person = gets.chomp
-    print 'Date: '
-    date = gets.chomp
-    puts 'Rental created successfully'
-    puts
-    @app.create_a_rental(date, book.to_i, person.to_i)
-  end
-
-  def list_rental_person
-    print 'ID of person: '
-    id = gets.chomp
-    puts 'Rentals: '
-    rentals = @app.list_rental_person(id.to_i)
-    rentals&.each do |rental|
-      puts "Date: \"#{rental.date}\", Book: #{rental.person.title} by #{rental.person.author}"
-    end
-    puts
+    @interface = Interface.new
   end
 
   def menu
@@ -93,37 +18,11 @@ class Main
     puts '7 - Exit'
   end
 
-  def list_all_books(with_id: false)
-    if with_id
-      @app.list_all_books.each.with_index(0) do |book, idx|
-        puts "#{idx}) Title: \"#{book.title}\", Author: #{book.author}"
-      end
-    else
-      @app.list_all_books.each do |book|
-        puts "Title: \"#{book.title}\", Author: #{book.author}"
-      end
-    end
-    puts
-  end
-
-  def list_all_persons(with_id: false)
-    if with_id
-      @app.list_all_persons.each.with_index(0) do |person, idx|
-        puts "#{idx}) [#{person.class}] Name: \"#{person.name}\", ID: #{person.id}, Age: #{person.age}"
-      end
-    else
-      @app.list_all_persons.each do |person|
-        puts "[#{person.class}] Name: \"#{person.name}\", ID: #{person.id}, Age: #{person.age}"
-      end
-    end
-    puts
-  end
-
   def main
     puts 'Welcome to OOP School Library Application!'
     puts
 
-    options = %i[list_all_books list_all_persons create_a_person create_a_book create_a_rental list_rental_person]
+    options = %i[list_books list_people create_person create_book create_a_rental list_rental_person]
 
     loop do
       menu
@@ -131,7 +30,7 @@ class Main
       break if option == '7'
 
       if option.to_i.positive? && option.to_i < 7
-        send(options[option.to_i - 1])
+        interface.send(options[option.to_i - 1])
       else
         puts 'Option unknown'
       end
