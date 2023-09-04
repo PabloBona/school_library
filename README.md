@@ -142,6 +142,11 @@ Remember to replace `/path/to/your/program/files` with the actual path to the di
 - GitHub: [@PabloBona](https://github.com/PabloBona)
 - LinkedIn: [@PabloBona](https://www.linkedin.com/in/pablo-bonasera/)
 
+👤 **Mohammad Anwar Hussaini**
+- GitHub: [@Anwar Hussaini](https://github.com/M-Anwar-Hussaini/)
+- X: [@Anwar Hussaini](https://twitter.com/MAnwarHussaini)
+- LinkedIn: [Anwar Hussaini](https://www.linkedin.com/in/anwar-hussaini/)
+
 
 ## ❓ FAQ <a name="faq"></a>
 
