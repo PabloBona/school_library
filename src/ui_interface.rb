@@ -1,6 +1,8 @@
 require_relative 'app'
+require_relative 'validation'
 
 class Interface
+  include Validation
   attr_accessor :app
 
   def initialize
@@ -8,29 +10,19 @@ class Interface
   end
 
   def create_person
-    loop do
-      print 'Would you like to create a student (1) or a teacher (2)? [Please enter a number]:'
-      option = gets.chomp.to_i
-
-      case option
-      when 1
-        create_student
-        break
-      when 2
-        create_teacher
-        break
-      else
-        puts 'Invalid number, Try again!'
-      end
+    option = check_options('Would you like to create a student (1) or a teacher (2)? [Please enter a number]: ',
+                           %w[1 2])
+    case option
+    when '1'
+      create_student
+    when '2'
+      create_teacher
     end
   end
 
   def create_book
-    print 'Title: '
-    title = gets.chomp
-
-    print 'Author: '
-    author = gets.chomp
+    title = take_input('Title: ')
+    author = take_input('Author: ')
 
     app.create_a_book(title, author)
     puts 'Book created successfully.'
@@ -94,34 +86,22 @@ class Interface
   private
 
   def create_student
-    print 'Age: '
-    age = gets.chomp
-
-    print 'Name: '
-    name = gets.chomp
-
-    print 'Has parents permission ? [Y/N]: '
-    permission = gets.chomp
+    age = take_input('Age: ')
+    name = take_input('Name: ')
+    permission = check_options('Has parents permission ? [Y/N]: ', %w[y n])
 
     puts 'Student created successfully.'
     puts
-
     app.create_a_student(name, age, permission)
   end
 
   def create_teacher
-    print 'Age: '
-    age = gets.chomp.to_i
-
-    print 'Name: '
-    name = gets.chomp
-
-    print 'Specialisation: '
-    specialisation = gets.chomp
+    age = check_number('Age: ')
+    name = take_input('Name: ')
+    specialisation = take_input('Specialization: ')
 
     puts 'Teacher created successfully '
     puts
-
     app.create_a_teacher(name, age, specialisation)
   end
 end
