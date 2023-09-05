@@ -108,7 +108,7 @@ class Interface
 
     app.create_a_student(name, age, permission)
   end
-  
+
   def create_teacher
     print 'Age: '
     age = gets.chomp.to_i
@@ -124,5 +124,4 @@ class Interface
 
     app.create_a_teacher(name, age, specialisation)
   end
-
 end
