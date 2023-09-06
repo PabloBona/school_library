@@ -19,7 +19,7 @@ describe Person do
 
   describe '#name' do
     it 'returns the person\'s name' do
-      expect(@person.name).to eql 'John Doe'
+      expect(@person.name).to eql 'Alice Johnson'
     end
   end
 
