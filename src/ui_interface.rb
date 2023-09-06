@@ -99,7 +99,6 @@ class Interface
     age = check_number('Age: ')
     name = take_input('Name: ')
     specialisation = take_input('Specialization: ')
-
     puts 'Teacher created successfully '
     puts
     app.create_a_teacher(name, age, specialisation)
