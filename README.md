@@ -149,6 +149,9 @@ Remember to replace `/path/to/your/program/files` with the actual path to the di
 - X: [@Anwar Hussaini](https://twitter.com/MAnwarHussaini)
 - LinkedIn: [Anwar Hussaini](https://www.linkedin.com/in/anwar-hussaini/)
 
+👤 **Dani Morillo**
+- GitHub: [danifromecuador](https://github.com/danifromecuador)
+- LinkedIn: [danifromecuador](https://www.linkedin.com/in/danifromecuador)
 
 ## ❓ FAQ <a name="faq"></a>
 
