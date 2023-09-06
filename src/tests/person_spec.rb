@@ -6,8 +6,8 @@ require 'rspec'
 
 describe Person do
   before :each do
-    @person = Person.new(20, 'John Doe', parent_permission: true)
-    @book = Book.new('The Catcher in the Rye', 'J.D. Salinger')
+    @person = Person.new(20, 'Alice Johnson', parent_permission: true)
+    @book = Book.new('To Kill a Mockingbird', 'Harper Lee')
     @date = '2023-09-06'
   end
 
