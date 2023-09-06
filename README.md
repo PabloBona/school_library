@@ -39,6 +39,8 @@ This project is implemented using the Ruby programming language, known for its e
 - [x] Implementation of functions using `def ...end` syntax.
 - [x] Display output using `puts ...`.
 - [x] Create classes using `class ...end` syntax.
+- [x] Preserve the data in `json` format.
+- [x] Retrieve data from the existing file and save to the their relavent arrays
 
 ## Future Features <a name="future-project"></a>
 - Command-line Interface: Enhance the app by adding a command-line interface for easy interaction and management of the library's functions.
