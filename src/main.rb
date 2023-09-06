@@ -1,4 +1,6 @@
 require_relative 'ui_interface'
+require 'json'
+require 'fileutils'
 
 class Main
   attr_accessor :interface
@@ -18,6 +20,22 @@ class Main
     puts '7 - Exit'
   end
 
+  def ensure_data_files_exist
+    data_folder = 'data'
+    FileUtils.mkdir_p(data_folder)
+
+    books_file = File.join(data_folder, 'books.json')
+    File.write(books_file, '[]') unless File.exist?(books_file)
+
+    people_file = File.join(data_folder, 'people.json')
+    File.write(people_file, '[]') unless File.exist?(people_file)
+
+    rentals_file = File.join(data_folder, 'rentals.json')
+    return if File.exist?(rentals_file)
+
+    File.write(rentals_file, '[]')
+  end
+
   def main
     puts 'Welcome to OOP School Library Application!'
     puts
@@ -35,6 +53,7 @@ class Main
         puts 'Option unknown'
       end
     end
+    interface.app.exit_app
     puts 'Appreciate your usage of this application!'
   end
 end

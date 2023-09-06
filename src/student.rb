@@ -1,14 +1,6 @@
 class Student < Person
-  attr_reader :classroom
-
-  def initialize(age, classroom = nil, name = 'Unknown', parent_permission: true)
-    super(age, name, parent_permission: parent_permission)
-    self.classroom = classroom if classroom
-  end
-
-  def classroom=(classroom)
-    @classroom = classroom
-    classroom.students.push(self) unless classroom.students.include?(self)
+  def initialize(age, _classroom = nil, name = 'Unknown', parent_permission: true, id: nil)
+    super(age, name, parent_permission: parent_permission, id: id)
   end
 
   def play_hooky
