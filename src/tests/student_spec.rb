@@ -1,7 +1,7 @@
 require_relative '../student'
 
 describe Student do
-  student = Student.new(12, nil, 'Mahdi', parent_permission: false, id:  110)
+  student = Student.new(12, nil, 'Mahdi', parent_permission: false, id: 110)
 
   describe '#initialize' do
     it 'Student name is Mahdi"' do
