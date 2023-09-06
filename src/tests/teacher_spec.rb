@@ -1,6 +1,6 @@
 require_relative '../teacher'
 
-describe Person do
+describe Teacher do
   hamid = Teacher.new(30, 'Web developer', 'Hamid', id: 555)
 
   describe '#initialize' do
