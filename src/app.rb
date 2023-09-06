@@ -13,6 +13,7 @@ class App
     @books = []
     @persons = []
     @rentals = []
+
     data_from_json
   end
 
