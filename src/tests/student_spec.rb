@@ -40,4 +40,10 @@ describe Student do
       expect(student.can_use_services?).to eq(false)
     end
   end
+
+  describe '#play_hooky' do
+    it 'The retun valud of play_hooky method should be "¯\\(ツ)/¯"' do
+      expect(student.play_hooky).to eq('¯\\(ツ)/¯')
+    end
+  end
 end
