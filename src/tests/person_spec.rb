@@ -58,4 +58,13 @@ describe Person do
       end
     end
   end
+
+  describe '#add_rental' do
+    it 'should add a rental to the person' do
+      rental = Rental.new(@date, @person, @book)
+      @person.add_rental(@book, @date)
+      expect(@person.rentals).to include(rental)
+    end
+  end
+  
 end
